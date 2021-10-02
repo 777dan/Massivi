@@ -10,22 +10,22 @@
 
 <body>
     <script>
-        let a;
-        let n = prompt("Input a number from 0 to 6");
-        if (n < 0 || n > 6 || isNaN(n)) {
-            alert("Input a correct number from 1 to 7!");
+        let arr2d = [
+            [1, 2, 3, -19],
+            [4, -5, 6, 11],
+            [7, -8, 9, -12],
+        ];
+        alert(arr2d[0][0]); // 8
+
+        for (let i = 0; i < arr2d.length; i++) {
+            for (let j = 0; j < arr2d[i].length; j++) {
+                if (arr2d[i][j] > 0) {
+                    document.write("Элемент " + i + j + ": " + arr2d[i][j] + ", ");
+                }
+            }
+            document.write("</br>");
         }
-        let lang = prompt("Input a language");
-        let en = ["monday", "tuesday", "wensday", "thursday", "friday", "saturday", "sunday"];
-        let ua = ["понеділок", "вівторок", "середа", "четвер", "п'ятниця", "субота", "неділя"];
-        let ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
-        switch (lang) {
-            case "en": a = en[n]; break;
-            case "ru": a = ru[n]; break;
-            case "ua": a = ua[n]; break;
-            default: alert("Ведите язык правильно!");
-        }
-        alert(a);
+
     </script>
 </body>
 
