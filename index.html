@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a;
+        let n = prompt("Input a number from 0 to 6");
+        if (n < 0 || n > 6 || isNaN(n)) {
+            alert("Input a correct number from 1 to 7!");
+        }
+        let lang = prompt("Input a language");
+        let en = ["monday", "tuesday", "wensday", "thursday", "friday", "saturday", "sunday"];
+        let ua = ["понеділок", "вівторок", "середа", "четвер", "п'ятниця", "субота", "неділя"];
+        let ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+        switch (lang) {
+            case "en": a = en[n]; break;
+            case "ru": a = ru[n]; break;
+            case "ua": a = ua[n]; break;
+            default: alert("Ведите язык правильно!");
+        }
+        alert(a);
+    </script>
+</body>
+
+</html>
